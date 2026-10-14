@@ -1,0 +1,12 @@
+repo: https://codereview.qt-project.org/qt/qtbase
+
+primary_contact: rlohningqt@gmail.com
+
+# Optional. Additional email addresses we will CC on disclosure reports.
+auto_ccs:
+  - maintainer@example.org # TODO
+
+homepage: https://qt-project.org
+
+# Optional. true pauses reports without removing the enrolment; false (or omitting it) enables your project.
+disabled: true
