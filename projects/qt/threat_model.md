@@ -1,11 +1,15 @@
 # Threat model
 
 ## What this project does and where untrusted input enters
-- assume all input is untrusted unless the documenting comments in the sources state the opposite
+- untrusted input may only be passed to functions which are defined in a file containing the
+  string "// Qt-Security score:critical"
+- if comments in the code make clear that a function is expected to process untrusted data but the
+  function is defined in a file not containing the string "// Qt-Security score:critical", report
+  that with medium priority
 
 ## Components that matter most / least
-- source files containing the string "// Qt-Security score:critical" are most important and need to be
-  free of critical issues
+- source files containing the string "// Qt-Security score:critical" are most important and need to
+  be free of critical issues
 - source files containing the string "// Qt-Security score:significant" have medium priority
 - source files containing the string "// Qt-Security score:insignificant" are out of scope
 
